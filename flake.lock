@@ -1,0 +1,48 @@
+{
+  "nodes": {
+    "happ-nixos": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1785721680,
+        "narHash": "sha256-PGeG0tgVUDyEabfuKfOaJzhVQc2IJEAm5hZH2HRP81I=",
+        "ref": "refs/heads/main",
+        "rev": "21841e1030b46232b89a4fe84100fe2c75ae2298",
+        "revCount": 2,
+        "type": "git",
+        "url": "https://codeberg.org/VOXEL0798/happ.flake.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/VOXEL0798/happ.flake.git"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1787753485,
+        "narHash": "sha256-BZWCi9ZRJiARTuKTbbtvFTj7t1TK4G3UEckT3HyNfRg=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "062346a6d85bc4b49dfaa61c986e9c5be21217d1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-26.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "happ-nixos": "happ-nixos",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
