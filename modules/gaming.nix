@@ -7,7 +7,7 @@
     dedicatedServer.openFirewall = true;
   };
   environment.systemPackages = with pkgs; [
-  steam
+  pkgs.steam
   pkgs.rusty-path-of-building
   pkgs.lutris
   pkgs.prismlauncher
