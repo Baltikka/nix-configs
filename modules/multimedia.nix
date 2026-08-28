@@ -9,5 +9,6 @@
   pkgs.kdePackages.gwenview
   pkgs.obs-studio
   pkgs.reaper
+  pkgs.constrict
   ];
 }
