@@ -15,7 +15,6 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
-  fastfetch
   git
   telegram-desktop
   v2rayn
