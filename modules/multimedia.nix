@@ -1,6 +1,8 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
+  services.pulseaudio.support32Bit = true;
+
   environment.systemPackages = with pkgs; [
   pkgs.haruna
   pkgs.kdePackages.elisa
