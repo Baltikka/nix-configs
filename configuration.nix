@@ -9,6 +9,7 @@
       ./modules/network.nix
       ./modules/multimedia.nix
       ./modules/boot.nix
+      ./modules/desktop.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
