@@ -10,7 +10,9 @@
       ./modules/multimedia.nix
       ./modules/boot.nix
       ./modules/desktop.nix
+      ./modules/tools.nix
       #./modules/t440p.nix
+      #./modules/mainpc.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -60,12 +62,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  environment.systemPackages = with pkgs; [
-  fastfetch
-  ghostty
-  pfetch-rs
-  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

@@ -1,20 +1,34 @@
 {
-    description = "Ninekei NixOS system";
+
+    description = "Ninekei second flake";
 
     inputs = {
-        nixpkgs.url = github:NixOS/nixpkgs/nixos-26.05;
-
-        happ-nixos.url = "git+https://codeberg.org/VOXEL0798/happ.flake.git";
-        happ-nixos.inputs.nixpkgs.follows = "nixpkgs";
+        nixpkgs.url = "nixpkgs/nixos-26.05";
+        home-manager.url = "github:nix-community/home-manager/release-26.05";
+        home-manager.inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    outputs = {self, nixpkgs, happ-nixos, ...}: {
-        nixosConfigurations.nixpad = nixpkgs.lib.nixosSystem {
+    outputs = { self, nixpkgs,home-manager, ... }:
+        let
+            lib = nixpkgs.lib;
             system = "x86_64-linux";
-            modules = [
-                ./configuration.nix
-                happ-nixos.nixosModules.default
-            ];
+            pkgs = nixpkgs.legacyPackages.${system};
+        in {
+        nixosConfigurations = {
+            nixpad = lib.nixosSystem {
+                inherit system;
+                modules = [
+                    ./configuration.nix
+                ];
+            };
+        };
+        homeConfigurations = {
+            ninekei = home-manager.lib.homeManagerConfiguration {
+                inherit pkgs;
+                modules = [
+                    ./home.nix
+                ];
+            };
         };
     };
 }

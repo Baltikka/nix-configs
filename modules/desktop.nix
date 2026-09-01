@@ -11,4 +11,8 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
+  environment.systemPackages = with pkgs; [
+    kdePackages.plasma-workspace
+    kara
+  ];
 }
