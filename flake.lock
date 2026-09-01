@@ -1,44 +1,43 @@
 {
   "nodes": {
-    "happ-nixos": {
+    "home-manager": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1785721680,
-        "narHash": "sha256-PGeG0tgVUDyEabfuKfOaJzhVQc2IJEAm5hZH2HRP81I=",
-        "ref": "refs/heads/main",
-        "rev": "21841e1030b46232b89a4fe84100fe2c75ae2298",
-        "revCount": 2,
-        "type": "git",
-        "url": "https://codeberg.org/VOXEL0798/happ.flake.git"
+        "lastModified": 1787377438,
+        "narHash": "sha256-Sxu1NLTD/Ern6hFGLlZmtKCSct3YQXZI/lls8RE1XeM=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "65258d5c65a250189fde2e35f490d15e064c4c62",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://codeberg.org/VOXEL0798/happ.flake.git"
+        "owner": "nix-community",
+        "ref": "release-26.05",
+        "repo": "home-manager",
+        "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1787753485,
-        "narHash": "sha256-BZWCi9ZRJiARTuKTbbtvFTj7t1TK4G3UEckT3HyNfRg=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "062346a6d85bc4b49dfaa61c986e9c5be21217d1",
-        "type": "github"
+        "lastModified": 1787962033,
+        "narHash": "sha256-SYbFPw4Je7tTpsl5qPqmmxPWuQyA9AGddCDieY5QG5A=",
+        "rev": "c5c4a43b0e8056328ec4529f735cabdb8f1942bb",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.8639.c5c4a43b0e80/nixexprs.tar.xz"
       },
       "original": {
-        "owner": "NixOS",
+        "id": "nixpkgs",
         "ref": "nixos-26.05",
-        "repo": "nixpkgs",
-        "type": "github"
+        "type": "indirect"
       }
     },
     "root": {
       "inputs": {
-        "happ-nixos": "happ-nixos",
+        "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }
     }
